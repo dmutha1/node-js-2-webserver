@@ -36,9 +36,16 @@ app.get('/help',(req,res) =>{
     welecomeTitle: 'Welecome to my page',
     pageTitle : 'Help Page',
     currentYear :new Date().getFullYear()
-  })
+  });
 });
 
+app.get('/projects',(req,res)=>{
+  res.render(('projects.hbs'),{
+    welecomeTitle: 'Welecome to my page',
+    pageTitle : 'Help Page'
+  });
+
+});
 app.get('/bad', (req,res)=>{
   res.send({
     errorMessage: 'Handling error, please visit back'
